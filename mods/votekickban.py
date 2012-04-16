@@ -33,7 +33,7 @@ class Bf3Mod(base.Bf3Mod):
 
                     self.actionHandler.sayAll("Type /y /yes or 1  to kick or ban %s" % str(params[1]).upper() )
                     self.actionHandler.sayAll("Type /n or /no or 0 if you want %s to stay" %  str(params[1]).upper())
-                    self.actionHandler.sayAll("Vote is ending in  seconds" % str(self.voteTime))
+                    self.actionHandler.sayAll("Vote is ending in %s seconds" % str(self.voteTime))
         else:
             yText=["/y", "/yes", "y", "1"]
             nText=["/n", "/no", "n", "0"]
@@ -44,7 +44,7 @@ class Bf3Mod(base.Bf3Mod):
                     self.curVote['y'] += 1
                 elif text in nText:
                     self.curVote['n'] += 1
-                self.actionHandler.sayAll("%s %s %s %s YES %s NO" % (self.curVote["type"].upper(), self.curVote["name"], self.curVote["y"], str(self.curVote["n"])))
+                self.actionHandler.sayAll("%s %s %s YES %s NO" % (self.curVote["type"].upper(), self.curVote["name"], self.curVote["y"], str(self.curVote["n"])))
 
 
 
