@@ -5,7 +5,8 @@ a Battlefield 3 server. Additionally it provides Battlelog integration to allow 
 
 Requirements
 ===========
-* Python 2.7
+* Python 2.6
+* python argparse module
 
 
 Included modules

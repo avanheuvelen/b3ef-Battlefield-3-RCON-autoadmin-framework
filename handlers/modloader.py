@@ -19,7 +19,7 @@ class ModLoader:
         self.loadConfig()
 
     def loadConfig(self):
-        config=ConfigParser.SafeConfigParser(allow_no_value=True)
+        config=ConfigParser.SafeConfigParser()
         config.read('main.ini')
         
         self.mods["base"]=self.loadMod("base")
@@ -77,7 +77,7 @@ class ModLoader:
                 del(self.mods[n])
             else:
                 logging.info("Loaded %s ( %s ) by %s" % (m.name, n, m.author))
-                modConfig = ConfigParser.SafeConfigParser(allow_no_value=True)
+                modConfig = ConfigParser.SafeConfigParser()
                 modConfig.read('configs/%s.cfg' % os.path.basename(n))
                 self.mods[n]=m.Bf3Mod(self, self.actionHandler, modConfig)
         

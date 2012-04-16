@@ -21,7 +21,7 @@ def launch(args):
     consoleLogger.setFormatter(formatter)
     logging.getLogger('').addHandler(consoleLogger)
 
-    config=ConfigParser.SafeConfigParser(allow_no_value=True)
+    config=ConfigParser.SafeConfigParser()
     config.read("main.ini")
 
     serverSocket=connectAndAuthenticate(args.server_ip, args.server_port, args.server_password)
